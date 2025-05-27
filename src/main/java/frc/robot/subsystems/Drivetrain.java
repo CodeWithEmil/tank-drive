@@ -9,15 +9,15 @@ import frc.robot.constants.Constants;
 public class Drivetrain extends SubsystemBase {
 
     // Declaring each motor controller considering its respective motor's ID
-    private final VictorSPX leadingLeftMotor = new VictorSPX(Constants.frontRightMotorId);
-    private final VictorSPX followerLeftMotor = new VictorSPX(Constants.backRightMotorId);
-    private final VictorSPX leadingRightMotor = new VictorSPX(Constants.frontLeftMotorId);
-    private final VictorSPX followerRightMotor = new VictorSPX(Constants.backLeftMotorId);
+    private final VictorSPX leadingLeftMotor = new VictorSPX(Constants.frontLeftMotorId);
+    private final VictorSPX followerLeftMotor = new VictorSPX(Constants.backLeftMotorId);
+    private final VictorSPX leadingRightMotor = new VictorSPX(Constants.frontRightMotorId);
+    private final VictorSPX followerRightMotor = new VictorSPX(Constants.backRightMotorId);
 
 
     // Configuring motors according to their position
     public void setConfig() {
-        leadingRightMotor.setInverted(true);
+        leadingRightMotor.setInverted(false);
         leadingLeftMotor.setInverted(false);
         followerLeftMotor.follow(leadingLeftMotor);
         followerRightMotor.follow(leadingRightMotor);

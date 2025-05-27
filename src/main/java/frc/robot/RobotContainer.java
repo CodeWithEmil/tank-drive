@@ -31,7 +31,7 @@ public class RobotContainer {
   private void configureBindings() {
     drivetrain.setDefaultCommand(
             new RunCommand(
-                    () -> drivetrain.drive(-controller.getLeftY(), controller.getRightX()),
+                    () -> drivetrain.drive(controller.getRightX(), -controller.getLeftY()),
                     drivetrain
             )
     );
